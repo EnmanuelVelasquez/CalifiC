@@ -5,7 +5,7 @@
 #include <errno.h>
 #include <windows.h>
 #include <stdlib.h>
-#include "admin.h"
+//#include "admin.h"
 
 void saludoBienvenida();
 int loginAdmin(char *usuario, char *contrasena);
@@ -26,13 +26,13 @@ void manejarLogin() {
     printf("Ingrese su contraseña:\n"); 
     scanf("%s", contrasena); 
 
-tipoUsuario = loginAdmin(usuario, contrasena);
+    tipoUsuario = loginAdmin(usuario, contrasena);
 
-if (tipoUsuario == 1) { 
-    printf("Bienvenido Administrador\n"); 
-    menuPrincipalAdmin(); 
-    } else { 
-    printf("Usuario o contraseña incorrectos\n"); 
+    if (tipoUsuario == 1) { 
+        printf("Bienvenido Administrador\n"); 
+        menuPrincipalAdmin(); 
+        } else { 
+        printf("Usuario o contraseña incorrectos\n"); 
     }
 }
 
